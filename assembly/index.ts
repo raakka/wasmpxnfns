@@ -4,7 +4,7 @@ export function add(a: i32, b: i32): i32 {
   return a + b;
 }
 
-export function 602_uuid_gen():	String {
+export function UuidGen602(): String {
       var o = "";
       if (r)
         try {
@@ -29,6 +29,7 @@ export function 602_uuid_gen():	String {
         s = void 0 !== t.msecs ? t.msecs : m(),
         d = void 0 !== t.nsecs ? t.nsecs : Zu + 1,
         l = s - Wu + (d - Zu) / 1e4;
+	  // Why does this work in JS and not TS
       if (
         (l < 0 && void 0 === t.clockseq && (f = (f + 1) & 16383),
         (l < 0 || s > Wu) && void 0 === t.nsecs && (d = 0),
